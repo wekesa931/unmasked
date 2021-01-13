@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "name": "Andy",
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "name": "Betty",
+      "gender": "female"
+    },
+    {
+      "id": 3,
+      "name": "Cate",
+      "gender": "female"
+    },
+    {
+      "id": 4,
+      "name": "Dave",
+      "gender": "male"
+    },
+    {
+      "id": 5,
+      "name": "Ellen",
+      "gender": "female"
+    },
+    {
+      "id": 6,
+      "name": "Fiona",
+      "gender": "female"
+    },
+    {
+      "id": 7,
+      "name": "Garry",
+      "gender": "male"
+    },
+    {
+      "id": 8,
+      "name": "Holly",
+      "gender": "female"
+    },
+    {
+      "id": 9,
+      "name": "Iris",
+      "gender": "female"
+    },
+    {
+      "id": 10,
+      "name": "Jane",
+      "gender": "female"
+    }
+  ],
+  "links": [
+    {
+      "name": "hahaha",
+      "linkLength": 300,
+      "source": 1,
+      "target": 2
+    },
+    {
+      "name": "hahaha",
+      "linkLength": 400,
+      "source": 1,
+      "target": 5
+    },
+    {
+      "name": "hahaha",
+      "linkLength": 400,
+      "source": 1,
+      "target": 6
+    },
+
+    {
+      "name": "hahaha",
+      "linkLength": 200,
+      "source": 2,
+      "target": 3
+    },
+    {
+      "name": "hahaha",
+      "linkLength": 300,
+      "source": 2,
+      "target": 7
+    }
+  ,
+
+    {
+      "name": "hahaha",
+      "linkLength": 100,
+      "source": 3,
+      "target": 4
+    },
+    {
+      "name": "hahaha",
+      "linkLength": 300,
+      "source": 8,
+      "target": 3
+    }
+  ,
+    {
+      "name": "hahaha",
+      "linkLength": 200,
+      "source": 4,
+      "target": 5
+    }
+  ,
+
+    {
+      "name": "hahaha",
+      "linkLength": 300,
+      "source": 4,
+      "target": 9
+    },
+    {
+      "name": "hahaha",
+      "linkLength": 100,
+      "source": 5,
+      "target": 10
+    }
+  ]
+}
