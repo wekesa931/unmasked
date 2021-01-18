@@ -2,7 +2,7 @@ const neo4j = require('neo4j-driver')
 const user = 'neo4j'
 const password = "nmgunmasked"
 
-const driver = neo4j.driver("neo4j://34.254.94.175:7687", neo4j.auth.basic(user, password))
+const driver = neo4j.driver("bolt://localhost:7687", neo4j.auth.basic(user, password))
 
 export const checkName = async(body) => {
     let url = "MATCH p=()-[r]->() RETURN p"
@@ -44,6 +44,7 @@ export const checkName = async(body) => {
         result && result.records && result.records.forEach(record => {
             allRecords.push(record.get(0))
         });
+        // console.log(allRecords)
         return allRecords;
     } catch (e) {
         console.log(e.message)

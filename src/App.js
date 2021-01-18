@@ -39,12 +39,24 @@ const App = () => {
     </div>`;
   }, []);
 
-
+  // 
   useEffect(() => {
     setloading(true)
     const getData = async () => {
       try {
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          // headers: {
+          //   'Content-Type': 'application/json'
+          // },
+          body: JSON.stringify({ nodeType, organization, relationship, people, membership })
+        };
+        // const response = await fetch('http://localhost:7687', requestOptions)
         const neoData = await checkName({ nodeType, organization, relationship, people, membership })
+
+        // const neoData = await response.json();
+        console.log(neoData)
         if (neoData.length === 0) {
           alert("No data was found")
           setloading(false)
@@ -166,14 +178,14 @@ const App = () => {
           membership={membership}
           relationship={relationship}
         />}
-        <div className='flex-center'>
-          <p style={{ display: width < 820 && !loading ? 'block' : 'none'}}>Long press node to view summary</p>
-        </div>
+      <div className='flex-center'>
+        <p style={{ display: width < 820 && !loading ? 'block' : 'none' }}>Long press node to view summary</p>
+      </div>
       <section className="Main"> {
         (loading === false && linkData.length > 0 && finalNodeData.length > 0)
           ?
           <ForceGraph
-          sidePenData={sidePenData}
+            sidePenData={sidePenData}
             loading={loading}
             linksData={linkData}
             nodesData={finalNodeData}
