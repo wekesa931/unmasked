@@ -2,7 +2,7 @@ const neo4j = require('neo4j-driver')
 const user = 'neo4j'
 const password = "nmgunmasked"
 
-const driver = neo4j.driver("neo4j://localhost:7687", neo4j.auth.basic(user, password), {encrypted: 'ENCRYPTION_OFF'})
+const driver = neo4j.driver("bolt://34.254.94.175:7687", neo4j.auth.basic(user, password), {encrypted: 'ENCRYPTION_OFF'})
 
 export const checkName = async(body) => {
     let url = "MATCH p=()-[r]->() RETURN p"
